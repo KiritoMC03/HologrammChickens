@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: ae349f1899dfc094ea361a4805f71d83
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      74: 7947447455995148377
+    second: SaturnsRings.001|CameraAction.003
+  - first:
+      74: 545795130411267500
+    second: SaturnsRings.001|Key.001Action.001
+  - first:
+      74: 7077912870927961732
+    second: SaturnsRings.001|Sun.001|Sun|CameraAction.003|Sun|CameraAction.003
+  - first:
+      74: -5569450816050698838
+    second: SaturnsRings.001|Sun.001|Sun|EarthAction|Sun|EarthAction
+  - first:
+      74: 1147953616112339078
+    second: SaturnsRings.001|Sun.001|Sun|JupiterAction|Sun|JupiterAction
+  - first:
+      74: -5708905757895335701
+    second: SaturnsRings.001|Sun.001|Sun|MarsAction|Sun|MarsAction
+  - first:
+      74: 1111167756049907715
+    second: SaturnsRings.001|Sun.001|Sun|MercuryAction|Sun|MercuryAction
+  - first:
+      74: 4709387666000733097
+    second: SaturnsRings.001|Sun.001|Sun|MoonAction.001|Sun|MoonAction.001
+  - first:
+      74: 3539692187938553770
+    second: SaturnsRings.001|Sun.001|Sun|NeptuneAction.001|Sun|NeptuneAction.001
+  - first:
+      74: -6958745154277293698
+    second: SaturnsRings.001|Sun.001|Sun|SaturnAction|Sun|SaturnAction
+  - first:
+      74: 8784788758135612162
+    second: SaturnsRings.001|Sun.001|Sun|SaturnsRingsAction|Sun|SaturnsRingsAction
+  - first:
+      74: -1358639892407173492
+    second: SaturnsRings.001|Sun.001|Sun|SunAction|Sun|SunAction
+  - first:
+      74: -2083963863075318079
+    second: SaturnsRings.001|Sun.001|Sun|uranusAction|Sun|uranusAction
+  - first:
+      74: 8777798048555112487
+    second: SaturnsRings.001|Sun.001|Sun|VenusAction.001|Sun|VenusAction.001
+  - first:
+      74: 6392185598716385354
+    second: Saturn.001|CameraAction.003
+  - first:
+      74: -2108925949138289534
+    second: Saturn.001|Key.001Action.001
+  - first:
+      74: -6000169887508882319
+    second: Saturn.001|Sun.001|Sun|CameraAction.003|Sun|CameraAction.003
+  - first:
+      74: 8056158814044981513
+    second: Saturn.001|Sun.001|Sun|EarthAction|Sun|EarthAction
+  - first:
+      74: 6842927928317417813
+    second: Saturn.001|Sun.001|Sun|JupiterAction|Sun|JupiterAction
+  - first:
+      74: -2419182606574486698
+    second: Saturn.001|Sun.001|Sun|MarsAction|Sun|MarsAction
+  - first:
+      74: 9024927689764781431
+    second: Saturn.001|Sun.001|Sun|MercuryAction|Sun|MercuryAction
+  - first:
+      74: 6468650376516596402
+    second: Saturn.001|Sun.001|Sun|MoonAction.001|Sun|MoonAction.001
+  - first:
+      74: 7742145707577278551
+    second: Saturn.001|Sun.001|Sun|NeptuneAction.001|Sun|NeptuneAction.001
+  - first:
+      74: 3575392066047863222
+    second: Saturn.001|Sun.001|Sun|SaturnAction|Sun|SaturnAction
+  - first:
+      74: -8365997011610954926
+    second: Saturn.001|Sun.001|Sun|SaturnsRingsAction|Sun|SaturnsRingsAction
+  - first:
+      74: -1014581973158116258
+    second: Saturn.001|Sun.001|Sun|SunAction|Sun|SunAction
+  - first:
+      74: 9086983636025491734
+    second: Saturn.001|Sun.001|Sun|uranusAction|Sun|uranusAction
+  - first:
+      74: -8389039106999177523
+    second: Saturn.001|Sun.001|Sun|VenusAction.001|Sun|VenusAction.001
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
