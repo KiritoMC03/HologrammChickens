@@ -9,7 +9,7 @@ public class StateController : MonoBehaviour
     public UnityEvent StateChange;
 
     [SerializeField] internal AnimatorController _animatorController;
-    internal States State { get; set; }
+    internal States State { get; set; } = States.Walk;
 
     void Start()
     {
@@ -26,10 +26,7 @@ public class StateController : MonoBehaviour
     internal void Set(States state)
     {
         State = state;
-        if(StateChange != null) // ToDo: Нужно ли?
-        {
-            StateChange.Invoke();
-        }
+        StateChange?.Invoke();
     }
 
     internal enum States

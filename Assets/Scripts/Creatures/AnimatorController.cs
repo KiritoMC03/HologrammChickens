@@ -16,6 +16,11 @@ public class AnimatorController : MonoBehaviour
         _stateController = GetComponent<StateController>();
     }
 
+    virtual public void Change()
+    {
+
+    }
+
     /*protected void Change()
     {
         if(_stateController == null)

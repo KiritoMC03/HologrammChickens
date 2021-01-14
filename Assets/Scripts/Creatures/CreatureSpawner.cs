@@ -37,11 +37,11 @@ public class CreatureSpawner : MonoBehaviour
 
     private void Spawn()
     {
-        if(_area == null || _creature == null)
+        if (_area == null || _creature == null)
         {
-            Debug.Log("Поле Creature или Area не установлено!");
-            return;
+            throw new Exception("Поле Creature или Area не установлено!");
         }
+
         var newCreature = Instantiate(_creature, _area).transform;
 
         var randomSpread = new Vector3(

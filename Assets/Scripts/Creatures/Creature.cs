@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,18 +8,23 @@ using UnityEngine.Events;
 public class Creature : MonoBehaviour, IHealth
 {
     public UnityEvent AgentRestarted;
+    public UnityEvent ReachedCriticalHealth;
 
-    internal NavMeshAgent _agent;
-    public float Health { get; private set; }
+    internal NavMeshAgent agent;
+    [SerializeField] internal float health = 100;
+    [SerializeField] internal float criticalHealth = 20;
     public bool SeeFood { get; internal set; }
     public float DistanceDelta { get; internal set; }
-    internal bool CheckedFood = false;
-    [SerializeField] internal float _moveSpeed = 0.5f;
-    [SerializeField] internal float _runSpeed = 1;
-    public float MoveSpeed
+    internal bool checkedFood = false;
+    [SerializeField] internal float moveSpeed = 0.5f;
+    [SerializeField] internal float runSpeed = 1;
+
+    private void Start()
     {
-        get { return _moveSpeed; }
-        private set { _moveSpeed = value; }
+        if(criticalHealth >= health)
+        {
+            throw new Exception("CriticalHealth должен быть меньше Health.");
+        }
     }
 
     private void Update()
@@ -28,12 +34,15 @@ public class Creature : MonoBehaviour, IHealth
 
     virtual public void UpHealth(float value)
     {
-        Health += value;
+        health += value;
     }
 
     virtual public void ReduceHealth(float value)
     {
-
-        Health -= value;
+        health -= value;
+        if(health <= criticalHealth)
+        {
+            ReachedCriticalHealth?.Invoke();
+        }
     }
 }

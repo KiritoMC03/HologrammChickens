@@ -40,7 +40,7 @@ public class FeedHandler : MonoBehaviour
         }
 
         _transform.position = Vector3.MoveTowards(_transform.position, _food[0].transform.position, _creature.DistanceDelta);
-        if(_creature.Health < 20f)
+        if(_creature.health < 20f)
         {
             _stateController.Set(StateController.States.Run);
         }
@@ -53,7 +53,7 @@ public class FeedHandler : MonoBehaviour
 
     private void CheckFoodList()
     {
-        _creature.CheckedFood = true;
+        _creature.checkedFood = true;
         var tempFood = new List<GameObject>();
         foreach (var item in _food)
         {
@@ -73,20 +73,17 @@ public class FeedHandler : MonoBehaviour
             _creature.SeeFood = true;
         }
 
-        _creature.CheckedFood = false;
+        _creature.checkedFood = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Food>() != null)
         {
-            Debug.Log("Enter");
             if (_creature != null)
             {
-                Debug.Log("Creature != null");
-                if (!_creature.CheckedFood)
+                if (!_creature.checkedFood)
                 {
-                    Debug.Log("Add!");
                     _food.Add(other.gameObject);
                 }
             }

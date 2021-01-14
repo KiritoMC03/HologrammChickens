@@ -7,31 +7,27 @@ public class Chicken : Creature
     
     void Start()
     {
-        _agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        DistanceDelta = _moveSpeed * Time.deltaTime;
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        DistanceDelta = moveSpeed * Time.deltaTime;
     }
 
     void Update()
     {
-        DistanceDelta = _moveSpeed * Time.deltaTime;
+        DistanceDelta = moveSpeed * Time.deltaTime;
 
         if (SeeFood)
         {
-            _agent.enabled = false;
+            agent.enabled = false;
         }
         else
         {
-            if (_agent.enabled != true)
+            if (agent.enabled != true)
             {
-                _agent.enabled = true;
+                agent.enabled = true;
                 AgentRestarted.Invoke();
             }
         }
     }
-
-    
-
-    
 
     public void AddEat()
     {

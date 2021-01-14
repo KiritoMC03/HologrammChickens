@@ -40,16 +40,31 @@ public class WanderMode : MonoBehaviour
 	{
 		_nextPosition = FindNextPosition();
 
-		if (!_creature.SeeFood)
+		if (!_creature.SeeFood && _creature.health > 20)
 		{
-			MoveNext(_nextPosition);
+			MoveNext(_nextPosition, StateController.States.Walk);
+		}
+
+		if (!_creature.SeeFood && _creature.health < 20)
+		{
+			MoveNext(_nextPosition, StateController.States.Run);
 		}
 	}
 
-	private void MoveNext(Vector3 nextPosition)
+	private void MoveNext(Vector3 nextPosition, StateController.States movementMode)
 	{
-		_creature._agent.SetDestination(nextPosition);
-		_stateController.Set(StateController.States.Run);
+        _creature.agent.SetDestination(nextPosition);
+		
+		if(movementMode == StateController.States.Walk)
+        {
+			_creature.agent.speed = _creature.moveSpeed;
+		}
+		else
+		{
+			_creature.agent.speed = _creature.runSpeed;
+		}
+
+		_stateController.Set(movementMode);
 	}
 
 	private Vector3 FindNextPosition()

@@ -15,9 +15,9 @@ public class Mouth : MonoBehaviour, IEat
     private void OnTriggerEnter(Collider other)
     {
         var foodComponent = other.GetComponent<Food>();
+
         if (foodComponent != null)
         {
-            Debug.Log("Food Get");
             Eat(foodComponent.cost);
             Destroy(other.gameObject);
         }
