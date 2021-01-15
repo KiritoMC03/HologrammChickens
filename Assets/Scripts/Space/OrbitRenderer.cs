@@ -9,8 +9,10 @@ public class OrbitRenderer : MonoBehaviour
     /*[SerializeField]*/ private Orbit _orbit;
     [Range(30, 100)]
     [SerializeField] private int _segments;
+    [SerializeField] private bool _renderEveryFrame;
     private LineRenderer _lineRenderer;
     private OrbitMovement _orbitMovement;
+    private Coroutine _renderEveryFrameRoutine;
 
     private void Start()
     {
@@ -18,6 +20,8 @@ public class OrbitRenderer : MonoBehaviour
         _orbitMovement = GetComponent<OrbitMovement>();
         _orbit = _orbitMovement.orbitPath;
         CalculateEllipse();
+
+        _renderEveryFrameRoutine = StartCoroutine(RenderLine(_renderEveryFrame));
     }
 
     void CalculateEllipse()
@@ -41,6 +45,19 @@ public class OrbitRenderer : MonoBehaviour
         if (Application.isPlaying)
         {
             CalculateEllipse();
+        }
+    }
+
+    IEnumerator RenderLine(bool condition)
+    {
+        for(; ; )
+        {
+            if (condition)
+            {
+                CalculateEllipse();
+            }
+
+            yield return new WaitForEndOfFrame();
         }
     }
 }

@@ -1,44 +1,8 @@
 fileFormatVersion: 2
-guid: ad8e82025f0d2084db673f18333af12b
+guid: 6eaa69af36760584781bc93af7b30344
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable:
-  - first:
-      74: -2783986361458896556
-    second: Moon|Moon|Moon|Sun.001|Sun|CameraAction.003|Sun|CameraAction.003|Moo
-  - first:
-      74: 4889964301019714533
-    second: Moon|Moon|Moon|Sun.001|Sun|EarthAction|Sun|EarthAction|Moon|Sun.001|
-  - first:
-      74: -3667021901326055527
-    second: Moon|Moon|Moon|Sun.001|Sun|JupiterAction|Sun|JupiterAction|Moon|Sun.
-  - first:
-      74: -549673349114410283
-    second: Moon|Moon|Moon|Sun.001|Sun|MarsAction|Sun|MarsAction|Moon|Sun.001|Su
-  - first:
-      74: 6414136101356158580
-    second: Moon|Moon|Moon|Sun.001|Sun|MercuryAction|Sun|MercuryAction|Moon|Sun.
-  - first:
-      74: -3335538742262589124
-    second: Moon|Moon|Moon|Sun.001|Sun|MoonAction.001|Sun|MoonAction.001|Moon|Su
-  - first:
-      74: 1517887748515534232
-    second: Moon|Moon|Moon|Sun.001|Sun|NeptuneAction.001|Sun|NeptuneAction.001|M
-  - first:
-      74: -4234835449398342396
-    second: Moon|Moon|Moon|Sun.001|Sun|SaturnAction|Sun|SaturnAction|Moon|Sun.00
-  - first:
-      74: 3566340113296948692
-    second: Moon|Moon|Moon|Sun.001|Sun|SaturnsRingsAction|Sun|SaturnsRingsAction
-  - first:
-      74: -8656907267906217018
-    second: Moon|Moon|Moon|Sun.001|Sun|SunAction|Sun|SunAction|Moon|Sun.001|Sun|
-  - first:
-      74: 5713148524366626236
-    second: Moon|Moon|Moon|Sun.001|Sun|uranusAction|Sun|uranusAction|Moon|Sun.00
-  - first:
-      74: 7345746613699173430
-    second: Moon|Moon|Moon|Sun.001|Sun|VenusAction.001|Sun|VenusAction.001|Moon|
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 1
