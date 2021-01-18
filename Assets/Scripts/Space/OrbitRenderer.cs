@@ -7,7 +7,7 @@ using UnityEngine;
 public class OrbitRenderer : MonoBehaviour
 {
     /*[SerializeField]*/ private Orbit _orbit;
-    [Range(30, 100)]
+    [Range(4, 100)]
     [SerializeField] private int _segments;
     [SerializeField] private bool _renderEveryFrame;
     private LineRenderer _lineRenderer;

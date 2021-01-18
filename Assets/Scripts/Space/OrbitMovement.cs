@@ -47,9 +47,4 @@ public class OrbitMovement : MonoBehaviour
             yield return null;
         }
     }
-
-    void Update()
-    {
-        
-    }
 }
