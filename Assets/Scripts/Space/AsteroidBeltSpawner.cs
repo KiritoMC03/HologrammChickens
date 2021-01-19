@@ -53,13 +53,16 @@ public class AsteroidBeltSpawner : MonoBehaviour
         {
             var newAsteroid = Instantiate(_prefab, offset, Quaternion.identity, _transform).GetComponent<OrbitMovement>();
 
-            var asteroidPositionX = _distanceToSun + UnityEngine.Random.Range(-_spread, _spread);
-            var asteroidPositionY = _distanceToSun + UnityEngine.Random.Range(-_spread, _spread);
-            var asteroidPositionZ = UnityEngine.Random.Range(-_spread, _spread);
+            if(newAsteroid != null)
+            {
+                var asteroidPositionX = _distanceToSun + UnityEngine.Random.Range(-_spread, _spread);
+                var asteroidPositionY = _distanceToSun + UnityEngine.Random.Range(-_spread, _spread);
+                var asteroidPositionZ = UnityEngine.Random.Range(-_spread, _spread);
 
-            newAsteroid.orbitPath = new Orbit(asteroidPositionX, asteroidPositionY);
-            newAsteroid.orbitProgress = UnityEngine.Random.Range(0f, 1f);
-            newAsteroid.orbitPeriod += UnityEngine.Random.Range(-_speedSpread, _speedSpread); 
+                newAsteroid.orbitPath = new Orbit(asteroidPositionX, asteroidPositionY);
+                newAsteroid.orbitProgress = UnityEngine.Random.Range(0f, 1f);
+                newAsteroid.orbitPeriod += UnityEngine.Random.Range(-_speedSpread, _speedSpread);
+            }
         }
     }
 }

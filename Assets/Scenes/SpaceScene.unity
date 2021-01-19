@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3e390a4a04196864a8879828bfbfb8bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e390a4a04196864a8879828bfbfb8bf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -340,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea2208c1ad233b949b97a172d0aa0aed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea2208c1ad233b949b97a172d0aa0aed, type: 3}
       propertyPath: m_LocalRotation.x
@@ -465,8 +465,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitingObject: {fileID: 1932509339}
   orbitPath:
-    xAxis: 70
-    yAxis: 70
+    xAxis: 79
+    yAxis: 79
   orbitProgress: 0.36
   orbitPeriod: 2946
   orbitActive: 1
@@ -582,6 +582,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1 &266654637
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,8 +634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitingObject: {fileID: 946178737}
   orbitPath:
-    xAxis: 120
-    yAxis: 120
+    xAxis: 175
+    yAxis: 175
   orbitProgress: 0.34
   orbitPeriod: 16479
   orbitActive: 1
@@ -747,6 +751,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1001 &358823503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -764,7 +772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2cf4ad05752c09a4d89fb9a82067e64c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2cf4ad05752c09a4d89fb9a82067e64c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -878,8 +886,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitingObject: {fileID: 358823504}
   orbitPath:
-    xAxis: 35
-    yAxis: 35
+    xAxis: 33
+    yAxis: 33
   orbitProgress: 0
   orbitPeriod: 188.1
   orbitActive: 1
@@ -1010,6 +1018,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1 &470841866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,8 +1070,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitingObject: {fileID: 508888938}
   orbitPath:
-    xAxis: 53
-    yAxis: 53
+    xAxis: 55
+    yAxis: 55
   orbitProgress: 0.85
   orbitPeriod: 1186
   orbitActive: 1
@@ -1175,6 +1187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1 &508779477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,10 +1221,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a66eccd99912c478492ed7cf07f51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _count: 1000
+  _count: 500
   _prefab: {fileID: 129330649}
   _sun: {fileID: 806848640}
-  _distanceToSun: 42
+  _distanceToSun: 41
   _spread: 3.5
   _speedSpread: 500
 --- !u!114 &508779479
@@ -1255,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89c34052a6bf06f45b8c1866630b9a39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -50
+      value: -55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89c34052a6bf06f45b8c1866630b9a39, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1345,7 +1361,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b70e011db2fa4af438ca60a591d47336, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b70e011db2fa4af438ca60a591d47336, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1628,6 +1644,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 50
   _renderEveryFrame: 1
+  _baseLineWidth: 0.05
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!114 &771244404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1774,7 +1794,6 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.14577319
@@ -1844,6 +1863,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1001 &905770003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1853,7 +1876,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8b6838c25e400c04ebb5e1525babd7b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b6838c25e400c04ebb5e1525babd7b1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1947,7 +1970,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6f9592a269b15234db9d6d7ce304cfc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6f9592a269b15234db9d6d7ce304cfc4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1955,7 +1978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6f9592a269b15234db9d6d7ce304cfc4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 80
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6f9592a269b15234db9d6d7ce304cfc4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2178,6 +2201,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 50
   _renderEveryFrame: 1
+  _baseLineWidth: 0.05
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!114 &960914710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2209,6 +2236,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2275,7 +2303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 400, z: 0}
+  m_LocalPosition: {x: 0, y: 200, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2312,6 +2340,21 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdbcf44cfaf36b94c88ad13037e6ac26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Moved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &970829524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2552,8 +2595,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitingObject: {fileID: 558072263}
   orbitPath:
-    xAxis: 90
-    yAxis: 90
+    xAxis: 120
+    yAxis: 120
   orbitProgress: 0.68
   orbitPeriod: 8400
   orbitActive: 1
@@ -2669,6 +2712,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1 &1209507643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,6 +2862,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 50
   _renderEveryFrame: 1
+  _baseLineWidth: 0.05
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!114 &1209507647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2851,7 +2902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 894e015a37f539040a3583c69a1c9a48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 894e015a37f539040a3583c69a1c9a48, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3031,7 +3082,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1143385752cb842419eb27398fcf5db5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1143385752cb842419eb27398fcf5db5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3232,8 +3283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitingObject: {fileID: 163398028}
   orbitPath:
-    xAxis: 20
-    yAxis: 20
+    xAxis: 19
+    yAxis: 19
   orbitProgress: 0
   orbitPeriod: 24
   orbitActive: 1
@@ -3349,6 +3400,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1 &2013344654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3608,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _segments: 100
   _renderEveryFrame: 0
+  _baseLineWidth: 0.15
+  _baseCameraDistance: 200
+  _camera: {fileID: 963194228}
+  _sun: {fileID: 806848640}
 --- !u!1 &2137352347
 GameObject:
   m_ObjectHideFlags: 0
