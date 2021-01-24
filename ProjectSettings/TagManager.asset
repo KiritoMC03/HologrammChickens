@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
+  - WalkableGround
   - Chickens
   - Grass
   - Planets
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3625047147
     locked: 0

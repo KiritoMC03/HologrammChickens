@@ -5,14 +5,4 @@ using UnityEngine;
 public class AsteroidBelt : MonoBehaviour
 {
 
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

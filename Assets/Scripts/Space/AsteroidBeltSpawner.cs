@@ -21,11 +21,11 @@ public class AsteroidBeltSpawner : MonoBehaviour
 
         if (_prefab == null)
         {
-            throw new Exception("Поле Prefab не установлено.");
+            throw new NullReferenceException("Prefab");
         }
         if (_sun == null)
         {
-            throw new Exception("Поле Sun не установлено.");
+            throw new NullReferenceException("Sun");
         }
         else
         {
@@ -38,14 +38,7 @@ public class AsteroidBeltSpawner : MonoBehaviour
 
     private void Generate()
     {
-        if (_prefab == null)
-        {
-            throw new Exception("Поле Prefab не установлено.");
-        }
-        if (_sun == null)
-        {
-            throw new Exception("Поле Sun не установлено.");
-        }
+        if (_prefab == null || _sun == null) return;
 
         var offset = _sun.transform.position;
 

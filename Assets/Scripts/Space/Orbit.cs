@@ -8,6 +8,10 @@ public class Orbit
     [SerializeField] private float xAxis;
     [SerializeField] private float yAxis;
 
+    private float _angle;
+    private float _x;
+    private float _y;
+
     public Orbit(float xAxis, float yAxis)
     {
         this.xAxis = xAxis;
@@ -16,11 +20,11 @@ public class Orbit
 
     public Vector2 Evaluate(float t)
     {
-        float angle = Mathf.Deg2Rad * 360f * t;
-        float x = Mathf.Sin(angle) * xAxis;
-        float y = Mathf.Cos(angle) * yAxis;
+        _angle = Mathf.Deg2Rad * 360f * t;
+        _x = Mathf.Sin(_angle) * xAxis;
+        _y = Mathf.Cos(_angle) * yAxis;
 
-        return new Vector2(x, y);
+        return new Vector2(_x, _y);
     }
 }
 

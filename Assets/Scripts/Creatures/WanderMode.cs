@@ -6,25 +6,26 @@ using UnityEngine;
 [RequireComponent(typeof(Creature))]
 public class WanderMode : MonoBehaviour
 {
-	private TerrainHandler _terrain;
+	[SerializeField] private Creature _creature;
+
+	private TerrainSizes _terrain;
 	private Transform _transform;
 	private Vector3 _nextPosition = new Vector3();
 	private StateController _stateController;
-	[SerializeField] private Creature _creature;
+
 
 	void Start()
 	{
 		_creature = GetComponent<Creature>();
 		_transform = GetComponent<Transform>();
 		_stateController = GetComponent<StateController>();
-		_terrain = GameObject.FindGameObjectWithTag("MainTerrain").GetComponent<TerrainHandler>();
+		_terrain = GameObject.FindGameObjectWithTag("MainTerrain").GetComponent<TerrainSizes>();
 
 		if (_terrain == null)
 		{
 			throw new Exception("Не найдено ни одного объекта с тегом \"MainTerrain\". Установите тег на целевой объект.");
 		}
-
-		_nextPosition = _transform.position;
+		_nextPosition = _transform.localPosition;
 	}
 
 	private void Update()
@@ -32,13 +33,15 @@ public class WanderMode : MonoBehaviour
 		if (Mathf.Round(_transform.localPosition.x) == Mathf.Round(_nextPosition.x) ||
 		Mathf.Round(_transform.localPosition.z) == Mathf.Round(_nextPosition.z))
 		{
+			Debug.Log("UpdateMoveAgent();");
 			UpdateMoveAgent();
 		}
 	}
 
 	public void UpdateMoveAgent()
 	{
-		_nextPosition = FindNextPosition();
+		_nextPosition = FindNextPosition() + _terrain.worldOffset;
+		Debug.Log("_nextPosition: " + _nextPosition);
 
 		if (!_creature.SeeFood && _creature.health > 20)
 		{
@@ -74,8 +77,8 @@ public class WanderMode : MonoBehaviour
 			throw new Exception("Не найдено ни одного объекта с тегом \"MainTerrain\". Установите тег на целевой объект.");
 		}
 
-		var randomX = UnityEngine.Random.Range(_terrain.WidthOffset, _terrain.Width - _terrain.WidthOffset);
-		var randomZ = UnityEngine.Random.Range(_terrain.LengthOffset, _terrain.Length - _terrain.LengthOffset);
+		var randomX = UnityEngine.Random.Range(_terrain.widthOffset, _terrain.width - _terrain.widthOffset);
+		var randomZ = UnityEngine.Random.Range(_terrain.lengthOffset, _terrain.length - _terrain.lengthOffset);
 
 		return new Vector3(randomX, 0, randomZ);
 	}

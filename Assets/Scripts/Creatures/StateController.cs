@@ -18,7 +18,7 @@ public class StateController : MonoBehaviour
             _animatorController = GetComponent<AnimatorController>();
             if(_animatorController == null)
             {
-                throw new Exception("Не установлено поле AnimatorController или не найдено компонента AnimatorController!");
+                throw new Exception("Не установлено поле AnimatorController!");
             }
         }
     }

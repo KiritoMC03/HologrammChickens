@@ -9,11 +9,12 @@ public class CreatureSpawner : MonoBehaviour
     [SerializeField] private Transform _area;
     [SerializeField] private float _spread = 5f;
     [SerializeField] private uint _count = 3;
-    private TerrainHandler _terrain;
+
+    private TerrainSizes _terrain;
 
     void Start()
     {
-        _terrain = GameObject.FindGameObjectWithTag("MainTerrain").GetComponent<TerrainHandler>();
+        _terrain = GameObject.FindGameObjectWithTag("MainTerrain").GetComponent<TerrainSizes>();
 
         if (_terrain == null)
         {
@@ -45,9 +46,9 @@ public class CreatureSpawner : MonoBehaviour
         var newCreature = Instantiate(_creature, _area).transform;
 
         var randomSpread = new Vector3(
-            UnityEngine.Random.Range(-_spread, _spread) + _terrain.Width / 2, 
+            UnityEngine.Random.Range(-_spread, _spread) + _terrain.width / 2, 
             0, 
-            UnityEngine.Random.Range(-_spread, _spread) + _terrain.Length / 2);
+            UnityEngine.Random.Range(-_spread, _spread) + _terrain.length / 2);
 
         newCreature.Translate(randomSpread);
     }

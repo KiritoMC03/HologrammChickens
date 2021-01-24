@@ -5,12 +5,15 @@ using UnityEngine;
 public class OrbitMovement : MonoBehaviour
 {
     [SerializeField] private Transform orbitingObject;
-    [SerializeField] internal Orbit orbitPath;
-
+    [SerializeField] internal Orbit orbitPath = new Orbit(10, 10);
     [Range(0f,1f)]
-    public float orbitProgress = 0f;
-    public float orbitPeriod = 3f;
-    public bool orbitActive = true;
+    [SerializeField] internal float orbitProgress = 0f;
+    [SerializeField] internal float orbitPeriod = 3f;
+    [SerializeField] internal bool orbitActive = true;
+    [SerializeField] internal bool toOptimize = false;
+
+    private Vector2 _tempOrbitPosition2D;
+    private Vector3 _tempOrbitPosition3D;
 
     void Start()
     {
@@ -26,8 +29,10 @@ public class OrbitMovement : MonoBehaviour
 
     void SetOrbitingObjectPosition()
     {
-        Vector2 orbitPosition = orbitPath.Evaluate(orbitProgress);
-        orbitingObject.localPosition = new Vector3(orbitPosition.x, 0, orbitPosition.y);
+        _tempOrbitPosition2D = orbitPath.Evaluate(orbitProgress);
+        _tempOrbitPosition3D.Set(_tempOrbitPosition2D.x, 0, _tempOrbitPosition2D.y);
+
+        orbitingObject.localPosition = _tempOrbitPosition3D;
     }
 
     IEnumerator AnimateOrbit()
@@ -41,9 +46,13 @@ public class OrbitMovement : MonoBehaviour
 
         while (orbitActive)
         {
-            orbitProgress += Time.deltaTime * orbitSpeed;
-            orbitProgress %= 1f;
-            SetOrbitingObjectPosition();
+            if (GameState.onPause != true)
+            {
+                orbitProgress += Time.deltaTime * orbitSpeed;
+                orbitProgress %= 1f;
+                SetOrbitingObjectPosition();
+            }
+            
             yield return null;
         }
     }
