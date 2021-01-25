@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreatureSpawner : MonoBehaviour
+public class CreatureSpawnerOLD : MonoBehaviour
 {
     [SerializeField] private GameObject _creature;
     [SerializeField] private Transform _area;
@@ -14,12 +14,13 @@ public class CreatureSpawner : MonoBehaviour
 
     void Start()
     {
-        _terrain = GameObject.FindGameObjectWithTag("MainTerrain").GetComponent<TerrainSizes>();
-
+        //_terrain = GameObject.FindGameObjectWithTag("MainTerrain").GetComponent<TerrainSizes>();
+        /*
         if (_terrain == null)
         {
             throw new Exception("Не найдено ни одного объекта с тегом \"MainTerrain\". Установите тег на целевой объект.");
         }
+        */
 
         if (_creature == null)
         {
@@ -45,11 +46,13 @@ public class CreatureSpawner : MonoBehaviour
 
         var newCreature = Instantiate(_creature, _area).transform;
 
+        /*
         var randomSpread = new Vector3(
             UnityEngine.Random.Range(-_spread, _spread) + _terrain.width / 2, 
             0, 
             UnityEngine.Random.Range(-_spread, _spread) + _terrain.length / 2);
-
+        
         newCreature.Translate(randomSpread);
+        */
     }
 }

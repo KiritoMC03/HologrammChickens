@@ -13,7 +13,7 @@ public class Planet : MonoBehaviour
 
     private Vector3 _toPlanet = Vector3.zero;
 
-    void Start()
+    private void Awake()
     {
         _transform = transform;
         _rigidbody = GetComponent<Rigidbody>();
@@ -26,7 +26,7 @@ public class Planet : MonoBehaviour
             _toPlanet = _transform.position - body.position;
 
             float distance = _toPlanet.magnitude;
-            float strength = body.mass * _rigidbody.mass / distance;
+            float strength = 10 * body.mass * _rigidbody.mass / distance;
 
             body.AddForce(_toPlanet.normalized * strength);
         }
@@ -36,15 +36,7 @@ public class Planet : MonoBehaviour
     {
         if (other.attachedRigidbody != null)
         {
-            Debug.Log(other);
             _affectedBodies.Add(other.attachedRigidbody);
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.attachedRigidbody)
-        {
-            _affectedBodies.Remove(other.attachedRigidbody);
         }
     }
 }
