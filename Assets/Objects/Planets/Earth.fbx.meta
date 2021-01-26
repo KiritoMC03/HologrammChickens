@@ -3,7 +3,17 @@ guid: 8b6838c25e400c04ebb5e1525babd7b1
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Earth
+    second: {fileID: 2100000, guid: e940c3df0cb210b469391d5d1aad0b9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Water
+    second: {fileID: 2100000, guid: b95b5395a04181b4490f036623196951, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

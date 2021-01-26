@@ -3,7 +3,17 @@ guid: d3afb84c22300a04e923d48841f5452c
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Phobos
+    second: {fileID: 2100000, guid: 9915346345b2fe846bc372ee80acdfd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PhobosHighlights
+    second: {fileID: 2100000, guid: ada8a635decc0b648a158a313eafd34d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 10
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

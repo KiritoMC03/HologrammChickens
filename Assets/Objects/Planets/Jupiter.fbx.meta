@@ -3,7 +3,17 @@ guid: 89c34052a6bf06f45b8c1866630b9a39
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jupiter
+    second: {fileID: 2100000, guid: 5abe8465d15a6fc40ba401730662fe73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JupiterHighlights
+    second: {fileID: 2100000, guid: 66a6bf248c371f04da36778ff25a2d86, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

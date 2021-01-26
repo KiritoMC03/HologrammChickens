@@ -3,7 +3,22 @@ guid: b70e011db2fa4af438ca60a591d47336
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uranus
+    second: {fileID: 2100000, guid: cfa0a7aaa78a8584786ebf083de05339, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UranusExtraHighlights
+    second: {fileID: 2100000, guid: c9f294210ca3dd34c8559355e2c52fc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UranusHighlights
+    second: {fileID: 2100000, guid: 7d00f58e4b6c2614b9b2df657f4f007d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

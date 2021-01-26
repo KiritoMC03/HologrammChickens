@@ -39,7 +39,12 @@ ModelImporter:
   - first:
       74: 7345746613699173430
     second: Moon|Moon|Moon|Sun.001|Sun|VenusAction.001|Sun|VenusAction.001|Moon|
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Moon
+    second: {fileID: 2100000, guid: 58bf7f8c6de582b40bc110092c8dace4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -121,7 +126,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

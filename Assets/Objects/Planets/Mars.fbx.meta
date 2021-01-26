@@ -3,7 +3,22 @@ guid: 2cf4ad05752c09a4d89fb9a82067e64c
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mars
+    second: {fileID: 2100000, guid: 1348d81ace87edc40a2a9f50273906c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MarsExtraHighlights
+    second: {fileID: 2100000, guid: 203c863d02b7cf841a5a60b0c5db7662, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MarsHighlights
+    second: {fileID: 2100000, guid: 4a2491c099c30fb468f9560ba9df689a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

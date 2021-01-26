@@ -171,7 +171,27 @@ ModelImporter:
   - first:
       74: 5295772409170653560
     second: Saturn.001|SaturnsRings.001|SaturnsRings.001|Sun.001|Sun|VenusAction.001|S
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ExtraSaturnRings.001
+    second: {fileID: 2100000, guid: b4b25d09c31fce043a6b69ad3bcc2ab0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Saturn.001
+    second: {fileID: 2100000, guid: aa907a2e60927984ab98803951b1e84e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SaturnHighlights.001
+    second: {fileID: 2100000, guid: d9df512cc4123f94f90039bf0e723843, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SaturnRings.001
+    second: {fileID: 2100000, guid: 3178e14a88fc28245a1daa83e025c73f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -253,7 +273,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

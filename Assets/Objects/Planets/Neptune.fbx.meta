@@ -3,7 +3,22 @@ guid: 6f9592a269b15234db9d6d7ce304cfc4
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neptune
+    second: {fileID: 2100000, guid: 70dc8fbdc46d1e8479b7372df3730d06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NeptuneHighlights
+    second: {fileID: 2100000, guid: 3d834745465981f4c8b2ee1abb33f31a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NetuneExtraHighlights
+    second: {fileID: 2100000, guid: 04f95a753e7735b418071f9ca7e1266c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
