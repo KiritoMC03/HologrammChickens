@@ -42,7 +42,7 @@ public class CameraRotateAround : MonoBehaviour
 
 	private void SetStartPosition()
     {
-		_offset = new Vector3(_startOffset.x, _startOffset.y, -Mathf.Abs(_zoomMax) / 2);
+		_offset = new Vector3(_startOffset.x, _startOffset.y, -Mathf.Abs(_zoomMax + _zoomMin) / 2 - _startOffset.z);
 		_transform.position = _target.position + _offset;
 	}
 
