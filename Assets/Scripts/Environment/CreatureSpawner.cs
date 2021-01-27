@@ -11,8 +11,11 @@ public class CreatureSpawner : MonoBehaviour
     [SerializeField] private Transform _area;
     [SerializeField] private float _spread = 5f;
     [SerializeField] private uint _count = 3;
+    [Range(0.1f, 5f)]
+    [SerializeField] private float speed = 0.5f;
 
     private TerrainSizes _terrain;
+    private Coroutine spawnerRoutine;
 
     void Start()
     {
@@ -25,19 +28,20 @@ public class CreatureSpawner : MonoBehaviour
             throw new Exception("Поле Area не установлено!");
         }
 
-        for (int i = 0; i < _count; i++)
-        {
-            Spawn();
-        }
+        spawnerRoutine = StartCoroutine(Spawner());
     }
 
-    private void Spawn()
+    IEnumerator Spawner()
     {
         if (_area == null || _creature == null)
         {
             throw new Exception("Поле Creature или Area не установлено!");
         }
 
-        Instantiate(_creature, _area);
+        for (int i = 0; i < _count; i++)
+        {
+            Instantiate(_creature, _area);
+            yield return new WaitForSeconds(speed);
+        }
     }
 }

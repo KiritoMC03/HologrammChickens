@@ -144,6 +144,7 @@ MonoBehaviour:
   _area: {fileID: 268726140}
   _spread: 0
   _count: 500
+  speed: 0.1
 --- !u!1 &268726139
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268726139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 180, z: 0}
+  m_LocalPosition: {x: 0, y: 146.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 837560482}
@@ -539,6 +540,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &940500687
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3494864387873057359}
+    m_Modifications:
+    - target: {fileID: 2049926466189450788, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_Name
+      value: UltimateFieldOfGravity
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.8141155
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.58070296
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049926466189450793, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+      propertyPath: m_Radius
+      value: 1.55
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
 --- !u!1 &1076222936
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +683,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
+--- !u!4 &1170966810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2049926466189450791, guid: 2493bae8737602b43b00b1e27da87a09, type: 3}
+  m_PrefabInstance: {fileID: 940500687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1893277586
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,7 +975,8 @@ Transform:
   m_LocalRotation: {x: -0.5, y: 0, z: 0, w: 0.8660254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_Children: []
+  m_Children:
+  - {fileID: 1170966810}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
