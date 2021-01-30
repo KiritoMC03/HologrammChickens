@@ -12,11 +12,14 @@ public class CreaturerMotor : MonoBehaviour
     private Vector3 right = Vector3.zero;
     Vector3 tempGravityVelocity = Vector3.zero;
 
-    void Start()
+    private void Awake()
     {
         _transform = transform;
         _rigidbody = GetComponent<Rigidbody>();
+    }
 
+    void Start()
+    {
         StartCoroutine(GenerateMoveVector());
     }
 

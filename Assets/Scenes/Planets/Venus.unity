@@ -143,8 +143,8 @@ MonoBehaviour:
   _creature: {fileID: 1656649013}
   _area: {fileID: 268726140}
   _spread: 0
-  _count: 500
-  speed: 0.5
+  _count: 50
+  speed: 0.1
 --- !u!1 &268726139
 GameObject:
   m_ObjectHideFlags: 0
