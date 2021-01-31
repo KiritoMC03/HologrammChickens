@@ -5,12 +5,11 @@ using UnityEngine;
 public class CreaturerMotor : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 4f;
+
     private Rigidbody _rigidbody;
     private Transform _transform;
-
     private Vector3 forward = Vector3.zero;
     private Vector3 right = Vector3.zero;
-    Vector3 tempGravityVelocity = Vector3.zero;
 
     private void Awake()
     {
@@ -21,14 +20,6 @@ public class CreaturerMotor : MonoBehaviour
     void Start()
     {
         StartCoroutine(GenerateMoveVector());
-    }
-
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            _rigidbody.velocity = _transform.up * 20;
-        }
     }
 
     private void FixedUpdate()

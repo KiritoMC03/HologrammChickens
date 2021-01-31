@@ -4,25 +4,25 @@ using UnityEngine.Events;
 [RequireComponent(typeof(OrbitRenderer))]
 public class OrbitQuality : MonoBehaviour
 {
-    [SerializeField] private bool _renderEveryFrame;
+    [SerializeField] private Camera _spaceCamera;
     [SerializeField] private float _baseLineWidth = 0.15f;
     [SerializeField] private float _normalRenderDistance = 200f;
     [SerializeField] private float _lineScale = 2f;
-    [SerializeField] private Camera _spaceCamera;
+    [SerializeField] private bool _renderEveryFrame;
 
     private OrbitRenderer _orbitRenderer;
     private LineRenderer _lineRenderer;
     private Coroutine _renderEveryFrameRoutine;
 
-    private SpaceCameraMovement _spaceCameraMovement;
-    private SpaceCameraRange _spaceCameraRange;
+    private CameraMovement _spaceCameraMovement;
+    private CameraRange _spaceCameraRange;
 
     private void Awake()
     {
         _orbitRenderer = GetComponent<OrbitRenderer>();
         _lineRenderer = GetComponent<LineRenderer>();
-        _spaceCameraMovement = _spaceCamera.GetComponent<SpaceCameraMovement>();
-        _spaceCameraRange = _spaceCamera.GetComponent<SpaceCameraRange>();
+        _spaceCameraMovement = _spaceCamera.GetComponent<CameraMovement>();
+        _spaceCameraRange = _spaceCamera.GetComponent<CameraRange>();
 
         _spaceCameraMovement.Moved.AddListener(new UnityAction(ChangeWidth));
     }
@@ -34,7 +34,7 @@ public class OrbitQuality : MonoBehaviour
             _renderEveryFrameRoutine = StartCoroutine(_orbitRenderer.RenderLine(_renderEveryFrame));
         }
     }
-    /*
+
     private void OnEnable()
     {
         _renderEveryFrameRoutine = StartCoroutine(_orbitRenderer.RenderLine(_renderEveryFrame));
@@ -43,7 +43,7 @@ public class OrbitQuality : MonoBehaviour
     private void OnDisable()
     {
         StopCoroutine(_renderEveryFrameRoutine);
-    }*/
+    }
 
     public void ChangeWidth()
     {

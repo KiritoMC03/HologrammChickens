@@ -6,7 +6,7 @@ using UnityEngine;
 public class OrbitRenderer : MonoBehaviour
 {
     [Range(4, 100)]
-    [SerializeField] private int _segments = 100;
+    [SerializeField] internal int segments = 100;
 
     private Orbit _orbit = new Orbit(10f, 10f);
     private LineRenderer _lineRenderer;
@@ -30,18 +30,18 @@ public class OrbitRenderer : MonoBehaviour
 
     void CalculateEllipse()
     {
-        Vector3[] points = new Vector3[_segments + 1];
+        Vector3[] points = new Vector3[segments + 1];
 
-        for (int i = 0; i < _segments; i++)
+        for (int i = 0; i < segments; i++)
         {
-            _position2D = _orbit.Evaluate(i / (float)_segments);
+            _position2D = _orbit.Evaluate(i / (float)segments);
             _position3D.Set(_position2D.x, 0f, _position2D.y);
             points[i] = _position3D + transform.position;
         }
 
-        points[_segments] = points[0];
+        points[segments] = points[0];
 
-        _lineRenderer.positionCount = _segments + 1;
+        _lineRenderer.positionCount = segments + 1;
         _lineRenderer.SetPositions(points);
     }
 

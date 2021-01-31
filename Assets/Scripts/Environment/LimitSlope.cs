@@ -7,7 +7,7 @@ public class LimitSlope : MonoBehaviour
     [SerializeField] internal Transform targetPlanet;
 
     private Transform _transform;
-    private Quaternion rotation;
+    private Quaternion _rotation;
 
     private void Awake()
     {
@@ -16,7 +16,7 @@ public class LimitSlope : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rotation = Quaternion.FromToRotation(-_transform.up, targetPlanet.position - _transform.position);
-        _transform.rotation = rotation * _transform.rotation;
+        _rotation = Quaternion.FromToRotation(-_transform.up, targetPlanet.position - _transform.position);
+        _transform.rotation = _rotation * _transform.rotation;
     }
 }

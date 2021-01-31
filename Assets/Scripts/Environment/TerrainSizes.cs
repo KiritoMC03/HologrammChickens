@@ -8,23 +8,23 @@ public class TerrainSizes : MonoBehaviour
 {
     internal Vector3 worldOffset;
 
-    private Terrain _terrain;
-    private Transform _transform;
-    private BoxCollider _boxCollider;
-
     [SerializeField] internal float width;
     [SerializeField] internal float length;
-    [SerializeField] private float _groundSafeZone = 5f;
+    [SerializeField] internal float underlyingColliderDepth = 5f;
     [Header("For NavMesh")]
     [SerializeField] internal float widthOffset;
     [SerializeField] internal float lengthOffset;
+
+    private Terrain _terrain;
+    private Transform _transform;
+    private BoxCollider _boxCollider;
 
     void Awake()
     {
         _transform = transform;
         _terrain = GetComponent<Terrain>();
         _boxCollider = GetComponent<BoxCollider>();
-
+        worldOffset = _transform.position;
         widthOffset = Mathf.Abs(widthOffset);
         lengthOffset = Mathf.Abs(lengthOffset);
 
@@ -36,19 +36,13 @@ public class TerrainSizes : MonoBehaviour
         var tempBoxColliderSize = _boxCollider.size;
         tempBoxColliderSize.x = width;
         tempBoxColliderSize.z = length;
-        tempBoxColliderSize.y = _groundSafeZone;
+        tempBoxColliderSize.y = underlyingColliderDepth;
         _boxCollider.size = tempBoxColliderSize;
 
         var tempBoxColliderCenter = _boxCollider.center;
         tempBoxColliderCenter.x = width / 2;
         tempBoxColliderCenter.z = length / 2;
-        tempBoxColliderCenter.y = -_groundSafeZone / 2;
+        tempBoxColliderCenter.y = -underlyingColliderDepth / 2;
         _boxCollider.center = tempBoxColliderCenter;
-    }
-
-    private void Start()
-    {
-        worldOffset = _transform.position;
-        Debug.Log(worldOffset);
     }
 }

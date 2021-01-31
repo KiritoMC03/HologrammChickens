@@ -15,16 +15,21 @@ public class OrbitMovement : MonoBehaviour
     private Vector2 _tempOrbitPosition2D;
     private Vector3 _tempOrbitPosition3D;
 
-    void Start()
+    private void Awake()
     {
-        if(orbitingObject == null)
+        if (orbitingObject == null)
         {
             orbitActive = false;
-            return;
         }
+    }
 
-        SetOrbitingObjectPosition();
-        StartCoroutine(AnimateOrbit());
+    void Start()
+    {
+        if (orbitActive)
+        {
+            SetOrbitingObjectPosition();
+            StartCoroutine(AnimateOrbit());
+        }
     }
 
     void SetOrbitingObjectPosition()

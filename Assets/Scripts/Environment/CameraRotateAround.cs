@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraRotateAround : MonoBehaviour 
 {
-
 	[SerializeField] private Transform _target;
 	[SerializeField] private float _sensitivity = 3;
 	[SerializeField] private Vector3 _startOffset = new Vector3(0, 0, 5);
