@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float _maxCameraHeight = 2000f;
     [SerializeField] private float _zoomStep = 0.1f;
     [SerializeField] private bool _useJoystic = false;
-    [SerializeField] private FixedJoystick _fixedJoystick;
+    [SerializeField] private Joystick _joystick;
 
     private Transform _transform;
     private CameraRange _spaceCameraRange;
@@ -40,14 +40,13 @@ public class CameraMovement : MonoBehaviour
 
         if (_useJoystic)
         {
-            if (_fixedJoystick == null)
+            if (_joystick == null)
             {
-                throw new ArgumentNullException("Поле FixedJoystick не установлено!");
+                throw new ArgumentNullException("Поле Joystick не установлено!");
             }
-            _fixedJoystick = _fixedJoystick.GetComponent<FixedJoystick>();
+            _joystick = _joystick.GetComponent<Joystick>();
         }
     }
-
 
     private void Start()
     {
@@ -79,7 +78,8 @@ public class CameraMovement : MonoBehaviour
 
         if(_offset != _zero)
         {
-            Debug.Log(_offset);
+            //Debug.Log("FFF!");
+            //Debug.Log(_offset);
             _transform.position += _offset;
             SetHeightLimit();
 
@@ -93,8 +93,8 @@ public class CameraMovement : MonoBehaviour
     {
         if (_useJoystic)
         {
-            _horizontal = _fixedJoystick.Horizontal * _speedMultiplier;
-            _vertical = _fixedJoystick.Vertical * _speedMultiplier;
+            _horizontal = _joystick.Horizontal * _speedMultiplier;
+            _vertical = _joystick.Vertical * _speedMultiplier;
         }
         else
         {
