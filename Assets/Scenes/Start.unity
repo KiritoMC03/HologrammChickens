@@ -2250,7 +2250,7 @@ GameObject:
   - component: {fileID: 347880702}
   - component: {fileID: 347880701}
   m_Layer: 0
-  m_Name: NavMeshCOntroller
+  m_Name: NavMeshController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

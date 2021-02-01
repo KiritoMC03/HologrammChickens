@@ -29,19 +29,20 @@ public class CameraMovementLimit : MonoBehaviour
 
         _tempPosition = _transform.position;
 
-        if (_transform.position.x > maximum.x || _transform.position.x < minimum.x)
-        {
-            _tempPosition.x = Mathf.Clamp(_transform.position.x, minimum.x, maximum.x);
-        }
-        if (_transform.position.y > maximum.y || _transform.position.y < minimum.y)
-        {
-            _tempPosition.y = Mathf.Clamp(_transform.position.y, minimum.y, maximum.y);
-        }
-        if (_transform.position.z < minimum.z || _transform.position.z > maximum.z)
-        {
-            _tempPosition.z = Mathf.Clamp(_transform.position.z, minimum.z, maximum.z);
-        }
+        _tempPosition.x = ClampAxis(_transform.position.x, minimum.x, maximum.x);
+        _tempPosition.y = ClampAxis(_transform.position.y, minimum.y, maximum.y);
+        _tempPosition.z = ClampAxis(_transform.position.z, minimum.z, maximum.z);
 
         _transform.position = _tempPosition;
+    }
+
+    private float ClampAxis(float position, float minimum, float maximum)
+    {
+        if (position > maximum || position < minimum)
+        {
+            return Mathf.Clamp(position, minimum, maximum);
+        }
+
+        return position;
     }
 }
